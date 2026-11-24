@@ -35,7 +35,7 @@ button.secondary{background:#493764;color:#fff;border:1px solid #6d568b}button:d
 <meta property="og:image" content="https://semicolonxss.github.io/Formwheel/og-image.png">
 <meta name="twitter:image" content="https://semicolonxss.github.io/Formwheel/og-image.png">
 </head>
-<body><div role="note" style="position:relative;z-index:1;box-sizing:border-box;max-width:58rem;margin:12px auto;padding:10px 13px;border:1px solid #e3bc72;border-radius:10px;background:#fff7e9;color:#624414;font:14px/1.55 system-ui"><strong>🚧 같은 온라인 방에서 다시 시작 공사 중</strong><div>재경기에서 이전 답을 지우는 데 새 Firebase 룰이 필요해요. 룰 적용 전에는 새 방에서 다시 플레이해 주세요.</div></div><main>
+<body><main>
 <nav class="nav"><a href="https://semicolonxss.github.io/Formwheel/">← Formwheel Hub</a><small>PARTY GAME · v1.0</small></nav>
 <div class="brand"><div class="orb">✦　◉　✦</div><h1>SYNC</h1><p>우리, 생각이 얼마나 똑같을까?<br>말하지 말고 같은 답을 선택해 봐!</p></div>
 <div id="notice" role="status" aria-live="polite"></div>
@@ -182,7 +182,7 @@ el.innerHTML=head+stats(s.round,s.score,s.streak)+'<h2>🎯 '+safe(q[0])+'</h2>'
 el.innerHTML=head+results(q,choices,people.length,s.roundPoints||0,s.streak,s.round,s.score)+(host?'<button class="wide" data-act="next">'+(s.round===MAX_ROUNDS?"최종 결과 보기":"다음 라운드 →")+'</button>':'<div class="notice">방장이 다음 라운드를 진행할 거예요.</div>');
 }else{
 saveBest(s.score);
-el.innerHTML=head+'<div class="result">🏆 SYNC COMPLETE<small>최종 팀 점수</small>'+s.score+'점</div>'+stats(MAX_ROUNDS,s.score,s.streak)+(host?'<button class="wide" data-act="restart">새 게임 시작 준비</button>':'<div class="notice">방장이 새로운 게임을 준비할 수 있어요.</div>');
+el.innerHTML=head+'<div class="result">🏆 SYNC COMPLETE<small>최종 팀 점수</small>'+s.score+'점</div>'+stats(MAX_ROUNDS,s.score,s.streak)+'<div role="note" style="position:relative;z-index:1;box-sizing:border-box;max-width:58rem;margin:12px auto;padding:10px 13px;border:1px solid #e3bc72;border-radius:10px;background:#fff7e9;color:#624414;font:14px/1.55 system-ui"><strong>⏳ Firebase 룰 적용 대기</strong><div>같은 방 재경기 · 재경기에서 이전 답을 지우는 데 새 Firebase 룰이 필요해요. 룰 적용 전에는 새 방에서 다시 플레이해 주세요.</div></div>'+(host?'<button class="wide" data-act="restart">새 게임 시작 준비</button>':'<div class="notice">방장이 새로운 게임을 준비할 수 있어요.</div>');
 }
 }
 async function stateTo(next){
